@@ -64,19 +64,19 @@ def handle_mouse_hook(e: tuple) -> None:
 
             handle_mouse_hook.last_call = current_time
 
-            window.evaluate_js("wJy7dhNta9.handleDrag({0},{1})".format(e.x, e.y,))
+            window.evaluate_js("P1fvaghqxg.handleDrag({0},{1})".format(e.x, e.y,))
     elif type(e) == mouse.ButtonEvent:
         if e.event_type == "up":
             window.evaluate_js(
-                "wJy7dhNta9.handleDrag({0},{1})".format(mousePosX, mousePosY))
+                "P1fvaghqxg.handleDrag({0},{1})".format(mousePosX, mousePosY))
             window.evaluate_js(
-                "wJy7dhNta9.setStart({0},{1})".format(mousePosX, mousePosY))
+                "P1fvaghqxg.setStart({0},{1})".format(mousePosX, mousePosY))
             is_mouse_down = False
         else:
             window.evaluate_js(
-                "wJy7dhNta9.setPosition({0},{1})".format(mousePosX, mousePosY))
+                "P1fvaghqxg.setPosition({0},{1})".format(mousePosX, mousePosY))
             window.evaluate_js(
-                "wJy7dhNta9.setStart({0},{1})".format(mousePosX, mousePosY))
+                "P1fvaghqxg.setStart({0},{1})".format(mousePosX, mousePosY))
             is_mouse_down = True
 
 
@@ -86,31 +86,31 @@ def handle_key_hook(e: tuple) -> None:
     if e.event_type == "down":
         is_laser = False
         if e.name == "shift":
-            window.evaluate_js("wJy7dhNta9.setShift(true)")
+            window.evaluate_js("P1fvaghqxg.setShift(true)")
         if e.name == RUBBER_KEY:
-            window.evaluate_js("wJy7dhNta9.setItem('rubber')")
+            window.evaluate_js("P1fvaghqxg.setItem('rubber')")
         elif e.name == LASER_KEY:
-            window.evaluate_js("wJy7dhNta9.setItem('laser')")
+            window.evaluate_js("P1fvaghqxg.setItem('laser')")
             is_laser = True
         elif e.name == PEN_KEY:
-            window.evaluate_js("wJy7dhNta9.setItem('pen')")
+            window.evaluate_js("P1fvaghqxg.setItem('pen')")
         elif e.name == CIRCLE_KEY:
-            window.evaluate_js("wJy7dhNta9.setItem('circle')")
+            window.evaluate_js("P1fvaghqxg.setItem('circle')")
         elif e.name == TRIANGLE_KEY:
-            window.evaluate_js("wJy7dhNta9.setItem('triangle')")
+            window.evaluate_js("P1fvaghqxg.setItem('triangle')")
         elif e.name == SQUARE_KEY:
-            window.evaluate_js("wJy7dhNta9.setItem('square')")
+            window.evaluate_js("P1fvaghqxg.setItem('square')")
         elif e.name == RECTANGLE_KEY:
-            window.evaluate_js("wJy7dhNta9.setItem('rectangle')")
+            window.evaluate_js("P1fvaghqxg.setItem('rectangle')")
         elif e.name == RIGHT_KEY:
-            window.evaluate_js("wJy7dhNta9.setSize(true)")
+            window.evaluate_js("P1fvaghqxg.setSize(true)")
         elif e.name == LEFT_KEY:
-            window.evaluate_js("wJy7dhNta9.setSize(false)")
+            window.evaluate_js("P1fvaghqxg.setSize(false)")
         elif e.name == CLEAR_KEY:
-            window.evaluate_js("wJy7dhNta9.clearAll()")
+            window.evaluate_js("P1fvaghqxg.clearAll()")
     else:
         if e.name == "shift":
-            window.evaluate_js("wJy7dhNta9.setShift(false)")
+            window.evaluate_js("P1fvaghqxg.setShift(false)")
 
 
 mouse.hook(handle_mouse_hook)
@@ -149,4 +149,4 @@ def quit_window():
 keyboard.add_hotkey(HIDE_KEY, hide_window, suppress=True)
 keyboard.add_hotkey(QUIT_KEY, quit_window, suppress=True)
 
-Pequena.start_window(debug=True)
+Pequena.start_window(debug=False)

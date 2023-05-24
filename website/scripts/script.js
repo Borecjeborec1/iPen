@@ -10,7 +10,7 @@ button.addEventListener('click', (e) => {
 });
 
 if (navigator.platform == "Win32") {
-  downloadLink.setAttribute('href', "https://github.com/Borecjeborec1/iPen/releases/download/untagged-68852ec79b55f65e5372/win_iPen_v1.0.0.zip");
+  downloadLink.setAttribute('href', "https://github.com/Borecjeborec1/iPen/releases/download/v1.0.0/win_iPen_v1.0.0.zip");
   downloadLink.innerText = "Download for windows"
 } else {
   downloadLink.setAttribute('href', "AddLinkHere");
