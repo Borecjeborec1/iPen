@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "start": "node Pequena/start.js",
+    "lib": "node Pequena/dev.js",
+    "build": "node Pequena/build.js",
+    "dev": "node Pequena/dev.js"
+  },
+  "dependencies": {
+    "pequena": "^1.1.8"
+  }
+}

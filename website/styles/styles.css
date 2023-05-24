@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --bg-color: #0F0F0F;
+  --text-color: #FFF;
+  --accent-color: #f0f0f0;
+  --anti-color: #353535;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Kanit", sans-serif;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+::-moz-selection {
+  background-color: var(--anti-color);
+}
+
+::selection {
+  background-color: var(--anti-color);
+}
+
+#canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.header {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.header .logo {
+  width: 200px;
+  height: 100px;
+  background-image: url(../assets/atzuki-light.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+.header .theme {
+  font-size: larger;
+  cursor: pointer;
+}
+
+.container {
+  width: 70%;
+  height: 100%;
+  margin: auto;
+  position: relative;
+}
+.container h1 {
+  font-weight: bold;
+  font-size: 100px;
+  width: 80%;
+  margin: 3rem 0;
+  line-height: 1.1;
+}
+.container p {
+  width: 70%;
+  font-size: 30px;
+}
+.container .download-button {
+  position: relative;
+  display: inline-block;
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin-top: 3rem;
+}
+.container .download-button a {
+  text-decoration: none;
+  color: inherit;
+}
+.container .download-button span {
+  display: inline-block;
+  margin-left: 5px;
+  transform: rotate(90deg);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+.container .download-button .platform-menu {
+  position: absolute;
+  top: 100%;
+  left: 5%;
+  display: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: var(--text-color);
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+.container .download-button .platform-menu li {
+  display: block;
+  cursor: pointer;
+}
+.container .download-button .platform-menu li .platform-option {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: var(--bg-color);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.container .download-button .platform-menu li .platform-option:hover {
+  background-color: var(--accent-color);
+}
+
+@media only screen and (max-width: 1580px) {
+  .container h1 {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1350px) {
+  .container {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 970px) {
+  .container {
+    text-align: center;
+  }
+  .container h1 {
+    font-size: 70px;
+  }
+  .container p {
+    font-size: 25px;
+    width: 80%;
+    position: relative;
+    margin: auto;
+  }
+}/*# sourceMappingURL=styles.css.map */
