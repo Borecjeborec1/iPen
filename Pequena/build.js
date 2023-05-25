@@ -16,7 +16,7 @@ let icon = settings.icon ?
   fs.existsSync(settings.icon) ?
     `--icon ${settings.icon}` : "" : ""
 
-const buildProcess = spawnInEnv(`pyinstaller --onefile --noconsole ./Pequena/main.py ${icon} --name ${appName} --distpath ./dist/ --workpath Pequena/tmp/ --add-data=Pequena/build;Pequena/build`)
+const buildProcess = spawnInEnv(`pyinstaller --onefile --noconsole ./Pequena/main.py ${icon} --name ${appName} --distpath ./dist/ --workpath Pequena/tmp/ --upx-dir ./Pequena/UPX/ --add-data=Pequena/build;Pequena/build`)
 
 
 buildProcess.stdout.on("data", (data) => {

@@ -7,5 +7,21 @@
   },
   "dependencies": {
     "pequena": "^1.1.8"
-  }
+  },
+  "name": "ipen_display_marker",
+  "description": "iPen is a minimal application for drawing on the screen. It provides a simple interface for users to create drawings using various tools and shortcuts.",
+  "version": "1.0.1",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Borecjeborec1/iPen.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Borecjeborec1/iPen/issues"
+  },
+  "homepage": "https://github.com/Borecjeborec1/iPen#readme"
 }
