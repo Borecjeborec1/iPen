@@ -1,4 +1,4 @@
-# iPen v1.0.0
+# iPen v1.0.1
 
 iPen is a minimal application for drawing on the screen. It provides a simple interface for users to create drawings using various tools and shortcuts.
 
