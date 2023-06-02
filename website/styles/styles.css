@@ -22,6 +22,10 @@ body {
           user-select: none;
   height: 100vh;
   width: 100vw;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
 }
 
 ::-moz-selection {
@@ -40,7 +44,6 @@ body {
 
 .header {
   height: 100px;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -145,8 +148,14 @@ body {
   }
   .container p {
     font-size: 25px;
-    width: 80%;
+    width: 90%;
     position: relative;
     margin: auto;
+  }
+  .container .download-button {
+    margin: 2rem;
+  }
+  body {
+    overflow-y: auto;
   }
 }/*# sourceMappingURL=styles.css.map */

@@ -85,6 +85,45 @@ function drawFluidElement(x, y, dx, dy) {
   }
 }
 
+
+
+function handleCanvasResize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  if (window.innerWidth < 800) {
+    document.querySelector(".container h1").innerText = "Welcome to iPen"
+
+  } else {
+    document.querySelector(".container h1").innerText = "Welcome to iPen: Unleash Your Creative Potential!"
+  }
+}
+handleCanvasResize()
+window.addEventListener('resize', handleCanvasResize);
+
+document.addEventListener("touchmove", e => {
+  var evt = (typeof e.originalEvent === 'undefined') ? e : e.originalEvent;
+  var touch = evt.touches[0] || evt.changedTouches[0];
+  if (isDown) {
+    const dx = touch.pageX - prevX;
+    const dy = touch.pageY - prevY;
+    drawFluidElement(touch.pageX, touch.pageY, dx, dy);
+    prevX = touch.pageX;
+    prevY = touch.pageY;
+  }
+});
+
+document.addEventListener("touchstart", e => {
+  var evt = (typeof e.originalEvent === 'undefined') ? e : e.originalEvent;
+  var touch = evt.touches[0] || evt.changedTouches[0];
+  prevX = touch.pageX;
+  prevY = touch.pageY;
+  drawFluidElement(e.clientX, e.clientY, 0, 0);
+  isDown = true;
+});
+
+document.addEventListener("touchend", e => {
+  isDown = false;
+});
 document.addEventListener("mousemove", e => {
   if (isDown) {
     const dx = e.clientX - prevX;
