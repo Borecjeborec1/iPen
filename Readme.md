@@ -3,6 +3,7 @@
 iPen is a minimal application for drawing on the screen. It provides a simple interface for users to create drawings using various tools and shortcuts.
 
 Visit [iPen website](https://ipen.netlify.app/)
+[![web-preview](./web-preview.png)](https://ipen.netlify.app/)
 
 ## Supported Platforms
 - Windows
