@@ -10,7 +10,7 @@ button.addEventListener('click', (e) => {
 });
 
 if (navigator.platform == "Win32") {
-  downloadLink.setAttribute('href', "https://github.com/Borecjeborec1/iPen/releases/download/v1.0.1/win_iPen_v1.0.1.zip");
+  downloadLink.setAttribute('href', "https://github.com/ROGR3/iPen/releases/download/v1.0.1/win_iPen_v1.0.1.zip");
   downloadLink.innerText = "Download for windows"
 } else {
   downloadLink.setAttribute('href', "AddLinkHere");
@@ -35,19 +35,24 @@ document.addEventListener('click', () => {
 let themeBtn = document.querySelector('.theme');
 let logo = document.querySelector(".logo")
 themeBtn.addEventListener("click", e => {
+  handleTheme()
+})
+handleTheme()
+
+function handleTheme() {
   if (themeBtn.textContent.includes("Night")) {
     themeBtn.innerHTML = "&#9728; Light"
     document.documentElement.style.setProperty('--bg-color', "#0F0F0F");
     document.documentElement.style.setProperty('--text-color', "#fff");
     document.documentElement.style.setProperty('--accent-color', "#f0f0f0");
     document.documentElement.style.setProperty('--anti-color', "#353535");
-    logo.style.backgroundImage = "url(assets/atzuki-light.svg)"
+    logo.style.backgroundImage = "url(assets/rogr-light.svg)"
   } else {
     themeBtn.innerHTML = "&#9729; Night"
     document.documentElement.style.setProperty('--bg-color', "#fff");
     document.documentElement.style.setProperty('--text-color', "#0F0F0F");
     document.documentElement.style.setProperty('--accent-color', "#353535");
     document.documentElement.style.setProperty('--anti-color', "#f0f0f0");
-    logo.style.backgroundImage = "url(assets/atzuki-dark.svg)"
+    logo.style.backgroundImage = "url(assets/rogr-dark.svg)"
   }
-})
+}

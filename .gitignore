@@ -1,3 +1,5 @@
 *.spec
 dist/
 .vscode/
+node_modules/
+Pequena/

@@ -11,7 +11,7 @@ Visit [iPen website](https://ipen.netlify.app/)
 
 ## Installation
 To install iPen, follow these steps:
-1. Download the latest release from the [iPen GitHub repository](https://github.com/borecjeborec1/ipen).
+1. Download the latest release from the [iPen GitHub repository](https://github.com/ROGR3/ipen).
 2. Extract the downloaded package to your preferred location.
 3. Run the `ipen.exe` (Windows) or `ipen` (Linux) executable.
 

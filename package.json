@@ -15,13 +15,13 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Borecjeborec1/iPen.git"
+    "url": "git+https://github.com/ROGR3/iPen.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Borecjeborec1/iPen/issues"
+    "url": "https://github.com/ROGR3/iPen/issues"
   },
-  "homepage": "https://github.com/Borecjeborec1/iPen#readme"
+  "homepage": "https://github.com/ROGR3/iPen#readme"
 }

@@ -10,21 +10,21 @@ let isDown = false;
 const particles = [];
 const maxParticles = 50;
 
-function Particle(x, y, size, hue) {
-  this.x = x;
-  this.y = y;
-  this.size = size;
-  this.hue = hue;
-  this.vx = Math.random() * 2 - 1;
-  this.vy = Math.random() * 2 - 1;
+class Particle {
+  constructor(x, y, size, hue) {
+    this.x = x;
+    this.y = y;
+    this.size = size;
+    this.hue = hue;
+    this.vx = Math.random() * 2 - 1;
+    this.vy = Math.random() * 2 - 1;
+  }
+  update() {
+    this.x += this.vx / 2;
+    this.y += this.vy / 2;
+    this.size -= 0.05;
+  };
 }
-
-Particle.prototype.update = function () {
-  this.x += this.vx;
-  this.y += this.vy;
-  this.size -= 0.1;
-};
-
 function drawFluidElement(x, y, dx, dy) {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
